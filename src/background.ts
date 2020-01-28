@@ -156,7 +156,8 @@ async function getTotp(text: string) {
 }
 
 function getBackupToken(service: string) {
-  if (navigator.userAgent.indexOf('Chrome') !== -1 && navigator.userAgent.indexOf('Edg') === -1 && service === 'drive') {
+  if (navigator.userAgent.indexOf('Chrome') !== -1 &&
+      navigator.userAgent.indexOf('Edg') === -1 && service === 'drive') {
     chrome.identity.getAuthToken(
         {
           'interactive': true,
