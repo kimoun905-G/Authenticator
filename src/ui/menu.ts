@@ -60,7 +60,7 @@ async function openHelp() {
   if (navigator.userAgent.indexOf('Firefox') !== -1) {
     url =
         'https://github.com/Authenticator-Extension/Authenticator/wiki/Firefox-Issues';
-  } else if (navigator.userAgent.indexOf('Edge') !== -1) {
+  } else if (navigator.userAgent.indexOf('Edg') !== -1) {
     url =
         'https://github.com/Authenticator-Extension/Authenticator/wiki/Edge-Issues';
   }

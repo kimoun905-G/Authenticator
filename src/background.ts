@@ -156,7 +156,7 @@ async function getTotp(text: string) {
 }
 
 function getBackupToken(service: string) {
-  if (navigator.userAgent.indexOf('Chrome') !== -1 && service === 'drive') {
+  if (navigator.userAgent.indexOf('Chrome') !== -1 && navigator.userAgent.indexOf('Edg') === -1 && service === 'drive') {
     chrome.identity.getAuthToken(
         {
           'interactive': true,
@@ -280,7 +280,7 @@ chrome.runtime.onInstalled.addListener(async (details) => {
   } else if (navigator.userAgent.indexOf('Firefox') !== -1) {
     url =
         'https://github.com/Authenticator-Extension/Authenticator/wiki/Firefox-Issues';
-  } else if (navigator.userAgent.indexOf('Edge') !== -1) {
+  } else if (navigator.userAgent.indexOf('Edg') !== -1) {
     url =
         'https://github.com/Authenticator-Extension/Authenticator/wiki/Edge-Issues';
   }
